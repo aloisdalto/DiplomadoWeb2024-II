@@ -3,19 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario | 2510</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Estoy en Recurso 2</h1>
     <nav>
         <a href="../../index.html">Inicio</a>
-        <a href="../recurso-c1.html">Recurso 1</a>
-        <a href="recurso-c1a.html">Recurso 2</a>
+        <a href="../recurso-c1.html">Categoria</a>
+        <a href="recurso-c1a.html">Formulario</a>
         <a href="../../C2/recurso-c2.html">Recurso 3</a>
         <a href="../../C2/C2A/recurso-c2a.html">Recurso 4</a>
         <a href="../../C3/recurso-c3.html">Recurso 5</a>
         <a href="../../C3/C3A/recurso-c3a.html">Recurso 6</a>
-    </nav
-    
+    </nav>
+
+    <h1 class="titulo">Formulario de Registro de Productos</h1>
+
+    <form action="" class="formulario">
+        <div class="mb-3">
+            <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+            <input type="text" class="form-control" id="nombreProducto" name="nombreProducto" placeholder="Camisa, pantalon, etc..">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionProducto" class="form-label">Descripción del Producto</label>
+            <textarea class="form-control" id="descripcionProducto" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="categoriaProducto" class="form-label">Categoría del producto</label>
+            <input class="form-control" list="categorias" id="categoriaProducto" placeholder="Seleccione la categoria del producto">
+            <datalist id="categorias">
+              <option value="Camisas">
+              <option value="Pantalones">
+              <option value="Medias">
+              <option value="Gorras">
+              <option value="Bolsos">
+            </datalist>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Talla del Producto</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tallaProducto" id="tallaProducto1" value="option1">
+                <label class="form-check-label" for="tallaProducto1">XS</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tallaProducto" id="tallaProducto2" value="option2">
+                <label class="form-check-label" for="tallaProducto2">S</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tallaProducto" id="tallaProducto3" value="option3">
+                <label class="form-check-label" for="inlineRadio3">M</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tallaProducto" id="tallaProducto4" value="option3">
+                <label class="form-check-label" for="tallaProducto4">L</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tallaProducto" id="tallaProducto5" value="option3">
+                <label class="form-check-label" for="tallaProducto5">XL</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="colorProducto" class="form-label">Color del Producto</label>
+            <input type="color" class="form-control form-control-color" id="colorProducto" value="#0f4c81" title="Elige el Color del Producto">
+        </div>
+        <div class="mb-3">
+            <label for="precioProducto" class="form-label">Precio del Producto</label>
+            <input type="number" class="form-control" id="precioProducto" name="precioProducto" placeholder="Precio ($)">
+        </div>
+        <div class="mb-3">
+            <label for="cantidaProducto" class="form-label">Cantidad en Stock</label>
+            <input type="number" class="form-control" id="cantidaProducto" name="cantidaProducto" placeholder="Cantidad">
+        </div>
+
+        <!--Caracteristicas y Imagenes-->
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Características Especiales
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="mb-3">
+                        <label for="caracteristicasProducto" class="form-label">Característica del Producto</label>
+                        <textarea class="form-control" id="caracteristicasProducto" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="caracteristicasProducto" class="form-label">Característica del Producto</label>
+                        <textarea class="form-control" id="caracteristicasProducto" rows="3"></textarea>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Imagenes del Producto
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="mb-3">
+                        <label for="imgProducto1" class="form-label">Suba Imagen Principal del Producto</label>
+                        <input class="form-control" type="file" id="imgProducto1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="imgProducto2" class="form-label">Suba Otras Imagen del Producto</label>
+                        <input class="form-control" type="file" id="imgProducto2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="imgProducto3" class="form-label">Suba Otras Imagen del Producto</label>
+                        <input class="form-control" type="file" id="imgProducto3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="imgProducto4" class="form-label">Suba Otras Imagen del Producto</label>
+                        <input class="form-control" type="file" id="imgProducto4">
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div class="mb-3 d-flex justify-content-center">
+            <button type="submit" class="btn" style="background-color: #0f4c81; color: white;">SUBIR</button>
+        </div>
+    </form>
+
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
